@@ -1,6 +1,6 @@
 {
   "name": "afterward",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Execute an error-first callback upon resolution or rejection of a promise (and return the promise)",
   "main": "index.js",
   "scripts": {
