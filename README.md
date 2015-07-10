@@ -39,9 +39,9 @@ greet('gege').then(console.log).catch(console.error)
 var afterward = require('afterward')
 ```
 
-### prom = afterward(prom, cb)
+### prom = afterward(prom [, cb])
 
-Upon resolution or rejection of the promise `prom`, execute the error-first style callback `cb`. The promise `prom` is returned.
+Upon resolution or rejection of the promise `prom`, execute the optional error-first style callback `cb`. The promise `prom` is returned.
 
 ## testing
 
