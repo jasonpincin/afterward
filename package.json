@@ -1,0 +1,43 @@
+{
+  "name": "afterward",
+  "version": "0.0.0",
+  "description": "Execute an error-first callback upon resolution or rejection of a promise (and return the promise)",
+  "main": "index.js",
+  "scripts": {
+    "test": "make npm-test",
+    "coverage": "make npm-coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jasonpincin/afterward.git"
+  },
+  "keywords": [
+    "promise",
+    "callback",
+    "resolve",
+    "reject"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jasonpincin/afterward/issues"
+  },
+  "homepage": "https://github.com/jasonpincin/afterward",
+  "author": {
+    "name": "Jason Pincin",
+    "email": "jason@pincin.com",
+    "url": "http://jason.pincin.com/"
+  },
+  "contributors": [],
+  "devDependencies": {
+    "eslint": "~0.24.1",
+    "istanbul": "~0.3.17",
+    "opn": "~1.0.1",
+    "promise-polyfill": "~2.1.0",
+    "tap-dot": "~1.0.0",
+    "tap-spec": "~4.0.2",
+    "tape": "~4.0.0"
+  },
+  "dependencies": {
+    "set-immediate-shim": "~1.0.1"
+  }
+}
