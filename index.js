@@ -1,4 +1,4 @@
-var setImmediate = require('set-immediate-shim')
+var setImmediate = require('timers').setImmediate
 
 module.exports = function afterward (done, cb) {
     cb = cb || function () {}
