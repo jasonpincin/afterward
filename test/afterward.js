@@ -2,6 +2,8 @@ var test      = require('tape'),
     afterward = require('..'),
     Promise   = require('promise-polyfill')
 
+Function.prototype.bind = Function.prototype.bind || require('function-bind') // eslint-disable-line no-extend-native
+
 test('afterward', function (t) {
     t.plan(8)
 
