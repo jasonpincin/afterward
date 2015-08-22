@@ -26,13 +26,15 @@
   "contributors": [],
   "devDependencies": {
     "@jasonpincin/standard": "~5.0.0-7",
-    "eslint": "~0.24.1",
+    "function-bind": "~1.0.2",
     "istanbul": "~0.3.17",
     "opn": "~1.0.1",
+    "phantomjs": "~1.9.18",
     "promise-polyfill": "~2.1.0",
     "tap-dot": "~1.0.0",
-    "tap-spec": "~4.0.2",
-    "tape": "~4.0.0"
+    "tap-spec": "~4.1.0",
+    "tape": "~4.2.0",
+    "zuul": "~3.3.0"
   },
   "dependencies": {},
   "scripts": {
