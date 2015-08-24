@@ -5,7 +5,7 @@ var test      = require('tape'),
 Function.prototype.bind = Function.prototype.bind || require('function-bind') // eslint-disable-line no-extend-native
 
 test('afterward', function (t) {
-    t.plan(8)
+    t.plan(10)
 
     var p1 = Promise.resolve('hi')
     afterward(p1, function (err, data) {
@@ -30,7 +30,10 @@ test('afterward', function (t) {
             resolve('hi')
         }, 100)
     })
-    var p4b = afterward(p4a)
+    var p4b = afterward(p4a, function (err, msg) {
+        t.false(err)
+        t.equal(msg, 'hi', 'executes callback after async op')
+    })
     t.equal(p4a, p4b, 'returns promise given')
     p4b.then(function (data) {
         t.equal(data, 'hi', 'resolves returned promise')
