@@ -43,6 +43,16 @@ var afterward = require('afterward')
 
 Upon resolution or rejection of the promise `prom`, execute the optional error-first style callback `cb`. The promise `prom` is returned.
 
+### errors
+
+```javascript
+var UnknownError = require('afterward/errors').UnknownError
+```
+
+#### UnknownError
+
+The constructor function of the `Error` object provided to callback `cb` when the Promise `prom` is rejected with no argument.
+
 ## testing
 
 `npm test [--dot | --spec] [--phantom] [--grep=pattern]`
