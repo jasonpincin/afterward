@@ -36,7 +36,9 @@
     "tape": "~4.2.0",
     "zuul": "~3.3.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "define-error": "~1.0.0"
+  },
   "scripts": {
     "test": "make npm-test",
     "coverage": "make npm-coverage",

@@ -5,13 +5,16 @@ var test      = require('tape'),
 Function.prototype.bind = Function.prototype.bind || require('function-bind') // eslint-disable-line no-extend-native
 
 test('afterward', function (t) {
-    t.plan(10)
+    t.plan(11)
 
     var p1 = Promise.resolve('hi')
     afterward(p1, function (err, data) {
         t.false(err, 'err is falsey on resolution')
         t.equal(data, 'hi', 'should invoke cb with resolved data')
     })
+    t.doesNotThrow(function () {
+        afterward(p1, {})
+    }, 'does not throw when 2nd arg is not a function')
 
     var p2 = Promise.reject()
     afterward(p2, function (err, data) {
