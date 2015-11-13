@@ -4,14 +4,14 @@ node_js:
 - '0.10'
 - '0.12'
 - '4.0'
+- '5.0'
 before_install:
 - npm install -g npm@'>=2.9.1'
 before_script:
 - npm install -g coveralls@2.10.0
-script:
-- make travis-test
-- '[ "${TRAVIS_NODE_VERSION}" = "0.12" ] && travis_retry travis_wait make browser-test
-  || true'
+script: 
+- npm run -s travis-test
+- '[ "${TRAVIS_NODE_VERSION}" = "0.12" ] && travis_retry travis_wait npm run -s travis-browser-test || true'
 env:
   global:
   - secure: CSOkLfCVHZDs/B8abivqJGFnIPLcNNZfg3DBDZFJUK/N6g+AmgqUXrnVltumRzoJTItqsTbk24iTUQH0PGrXX9IcXnWzWQdM9yM0ilil1xUpyK+pj9N2cJ1MAuGOzFAA2K/TrYSWd3JRZVGopL3HDeT3gMhfIM1ukdLJE8wCs9e17I8AZ68SqDnL3rBo0dfbDBCoIiLT6GVnaXVXct/VT5ABWj/02Z2+p3Bv+I3bmp0+8JCorGO5FcjDWybJBuY86uWIEqEya1FI5yrq2Dmme0tmqNBIdHyWhjqx8LKznO1o8eV4q5PczFSkbwInWthuj13tN8mZVk2Xi8FbsiDdBJlpNpxmqIBdPIRAcqbue1mEOUZ/V7tsL/6bGws1gDxRAPymaO/MgrER2zwyijASq9gT2w2Bv8eit8eita6zi7rSdP2DUPNxCvWvSgNqc983MIlpTqsyoJkblkDu0HK145d6nc6tMRE5isGlF8nc7GmM2/DtEujZ8beDPHMpeTn7Lfb+GmemCbqTMFDejmslfUyAF5HcEJ+X8j//UM6xVdhfU9qLxATOOTL2enmpumzNlMqxEUk05mYoFmsg4k5Kzvl6McZkJK3rmoE6Lqr3a76Z5BLunW4zqAMpaoujPV/bJTd4C2LU6uzin3jD1gBC+rgwhW57rz3cRJKZr328d9Y=
